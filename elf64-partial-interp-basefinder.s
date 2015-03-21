@@ -1,5 +1,7 @@
 # ABI="ELF64"
 # gcc elf64-partial-interp-basefinder.s -o elf64-partial-interp-basefinder
+.section .text
+.global main
 main:             
   # read the dynamic header
   push $0x400130ff
