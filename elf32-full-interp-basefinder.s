@@ -28,5 +28,5 @@ found_debug:
   mov -0xc(%esi), %eax  # Grab the entry in the symbol table 
                         # before GOT (r_debug)
 
-get_interp_base:        # move the fourth pointer in DEBUG
+get_interp_base:        # move the fifth pointer in DEBUG
   mov 0x10(%eax), %ebx  # into ebx - ptr to ld-linux base
