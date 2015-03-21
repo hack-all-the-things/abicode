@@ -1,6 +1,8 @@
 # ABI="ELF32"
 # compile : gcc -fstack-protector-all -s -Wl,-z,relro,-z,now -fPIE elf32-full-interp-basefinder.s -o elf32-full-interp-basefinder
 # Works with or without the above compile options.
+.text
+.global main
 
 main:
   mov 0x80480bc, %ebx   # move pointer to _DYNAMIC_ into ebx
